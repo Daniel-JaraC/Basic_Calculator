@@ -22,11 +22,11 @@ elif num == '3':
 elif num == '4':
     print("Type 2 numbers you wish to divide.\n ")
     a, b = input(), input()
-    if b == 0:
-        print("Cannot divide by 0.\n ")
-    else:
+    try:
         res = float(a) / float(b)
         print(a + " / " + b + " = " + str(res))
+    except ZeroDivisionError:
+        print("Cannot divide by 0.\n ")
 else:
     print("Invalid operation.\n ")
 
